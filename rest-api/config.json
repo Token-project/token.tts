@@ -1,0 +1,15 @@
+{
+   "host": "localhost",
+   "port": "3000",
+   "jwt_expiretime": "126144000",
+   "channelName": "mychannel",
+   "chaincodeName": "tts",
+   "eventWaitTime": "30000",
+   "peers": [
+      "peer1"
+   ],
+   "admins": [{
+      "username": "admin",
+      "secret": "adminpwd"
+   }]
+}
