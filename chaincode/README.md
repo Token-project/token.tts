@@ -86,7 +86,7 @@ instantiated once on a channel)
 
 ## Step 4 - Query the chaincode
 
-Query all donors
+Query all stamps
 ```
 docker exec -e "CORE_PEER_TLS_ENABLED=true" -e "CORE_PEER_TLS_ROOTCERT_FILE=/opt/home/tts-chain.pem" \
     -e "CORE_PEER_ADDRESS=$PEER" -e "CORE_PEER_LOCALMSPID=$MSP" -e "CORE_PEER_MSPCONFIGPATH=$MSP_PATH" \
@@ -94,7 +94,7 @@ docker exec -e "CORE_PEER_TLS_ENABLED=true" -e "CORE_PEER_TLS_ROOTCERT_FILE=/opt
 ```
 
 Expected response:
-This is correct as we do not have any donors in our network yet. We'll add one in the next step.
+This is correct as we do not have any stamp registered yet. We'll add one in the next step.
 
 ```
 []

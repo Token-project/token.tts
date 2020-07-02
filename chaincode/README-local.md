@@ -119,31 +119,31 @@ export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/pee
 export CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 export CORE_PEER_LOCALMSPID="Org1MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
-peer chaincode install -n ledger -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
+peer chaincode install -n tts -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
 
 export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 export CORE_PEER_ADDRESS=peer1.org1.example.com:7051
 export CORE_PEER_LOCALMSPID="Org1MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/ca.crt
-peer chaincode install -n ledger -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
+peer chaincode install -n tts -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
 
 export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
 export CORE_PEER_ADDRESS=peer0.org2.example.com:7051
 export CORE_PEER_LOCALMSPID="Org2MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
-peer chaincode install -n ledger -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
+peer chaincode install -n tts -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
 
 export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
 export CORE_PEER_ADDRESS=peer1.org2.example.com:7051
 export CORE_PEER_LOCALMSPID="Org2MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt
-peer chaincode install -n ledger -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
+peer chaincode install -n tts -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
 
 export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
 export CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 export CORE_PEER_LOCALMSPID="Org1MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
-peer chaincode upgrade -C mychannel -n ledger -l node -v 7.0 -c '{"Args":["init"]}' -P "AND ('Org1MSP.peer','Org2MSP.peer')" -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+peer chaincode upgrade -C mychannel -n tts -l node -v 7.0 -c '{"Args":["init"]}' -P "AND ('Org1MSP.peer','Org2MSP.peer')" -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 ```
 
 ### peer0.org1
@@ -153,7 +153,7 @@ export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/pee
 export CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 export CORE_PEER_LOCALMSPID="Org1MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
-peer chaincode install -n ledger -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
+peer chaincode install -n tts -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
 ```
 
 ### peer1.org1
@@ -163,7 +163,7 @@ export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/pee
 export CORE_PEER_ADDRESS=peer1.org1.example.com:7051
 export CORE_PEER_LOCALMSPID="Org1MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls/ca.crt
-peer chaincode install -n ledger -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
+peer chaincode install -n tts -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
 ```
 
 ### peer0.org2
@@ -173,7 +173,7 @@ export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/pee
 export CORE_PEER_ADDRESS=peer0.org2.example.com:7051
 export CORE_PEER_LOCALMSPID="Org2MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
-peer chaincode install -n ledger -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
+peer chaincode install -n tts -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
 ```
 
 ### peer1.org2
@@ -183,7 +183,7 @@ export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/pee
 export CORE_PEER_ADDRESS=peer1.org2.example.com:7051
 export CORE_PEER_LOCALMSPID="Org2MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt
-peer chaincode install -n ledger -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
+peer chaincode install -n tts -v 7.0 -l node -p /opt/gopath/src/github.com/chaincode/tts
 ```
 
 ## Instantiate the chaincode
@@ -200,7 +200,7 @@ export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/pee
 export CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 export CORE_PEER_LOCALMSPID="Org1MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
-peer chaincode instantiate -C mychannel -n ledger -l node -v 7.0 -c '{"Args":["init"]}' -P "AND ('Org1MSP.peer','Org2MSP.peer')" -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+peer chaincode instantiate -C mychannel -n tts -l node -v 7.0 -c '{"Args":["init"]}' -P "AND ('Org1MSP.peer','Org2MSP.peer')" -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 ```
 
 ### peer0.org1 - upgrade
@@ -210,7 +210,7 @@ export CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/pee
 export CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 export CORE_PEER_LOCALMSPID="Org1MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
-peer chaincode upgrade -C mychannel -n ledger -l node -v 7.0 -c '{"Args":["init"]}' -P "AND ('Org1MSP.peer','Org2MSP.peer')" -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+peer chaincode upgrade -C mychannel -n tts -l node -v 7.0 -c '{"Args":["init"]}' -P "AND ('Org1MSP.peer','Org2MSP.peer')" -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 ```
 
 Check that the chaincode was instantiated on the channel. You can run this after either an `upgrade` or an `instantiate` 
@@ -218,8 +218,8 @@ Check that the chaincode was instantiated on the channel. You can run this after
 ```
 # peer chaincode list --instantiated -C mychannel -o orderer.example.com:7050 --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem 
 Get instantiated chaincodes on channel mychannel:
-Name: ledger, Version: 7.0, Path: /opt/gopath/src/github.com/chaincode/chaincode_example02/node/, Escc: escc, Vscc: vscc
-Name: ledger, Version: 7.0, Path: /opt/gopath/src/github.com/chaincode/tts, Escc: escc, Vscc: vscc
+Name: tts, Version: 7.0, Path: /opt/gopath/src/github.com/chaincode/chaincode_example02/node/, Escc: escc, Vscc: vscc
+Name: tts, Version: 7.0, Path: /opt/gopath/src/github.com/chaincode/tts, Escc: escc, Vscc: vscc
 ```
 
 ## Invoke transactions to add participants in the network
@@ -243,9 +243,9 @@ curl couchdb0:5984/_all_dbs
 Check the docs in the db:
 
 ```
-curl couchdb0:5984/mychannel_ledger/_all_docs
-curl -X POST 'http://couchdb0:5984/mychannel_ledger/_find' -H 'Content-Type: application/json' --data '{"selector": {"docType": "donor"}}'
-curl -X POST 'http://couchdb0:5984/mychannel_ledger/_find' -H 'Content-Type: application/json' --data '{"selector": {"docType": "donation", "ledger":"1234"}}'
+curl couchdb0:5984/mychannel_tts/_all_docs
+curl -X POST 'http://couchdb0:5984/mychannel_tts/_find' -H 'Content-Type: application/json' --data '{"selector": {"docType": "stamp"}}'
+curl -X POST 'http://couchdb0:5984/mychannel_tts/_find' -H 'Content-Type: application/json' --data '{"selector": {"docType": "stamp", "hash":"1234"}}'
 ```
 
 ## Cleanup
