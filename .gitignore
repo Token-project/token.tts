@@ -1,0 +1,35 @@
+tmp
+archive
+.vscode
+.idea
+chaincode/node_modules
+chaincode/src/build
+chaincode/src/node_modules
+rest-api/node_modules
+ui/node_modules
+ui/Config
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+### MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
