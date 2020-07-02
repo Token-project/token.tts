@@ -1,4 +1,4 @@
-## Building and deploying an Time Stamping Service for Hyperledger Fabric
+## Token TTS (Time Stamping Service)
 
 This project builds and deploy a 2-tier application that uses the Fabric network to provide a Time Stamping Service. 
 
